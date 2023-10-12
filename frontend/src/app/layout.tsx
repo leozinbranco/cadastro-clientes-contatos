@@ -1,13 +1,11 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Providers } from './providers'
-import { Sidebar } from '@/components/Sidebar'
-import { Flex } from '@chakra-ui/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'OrderFlow'
+  title: 'ClientHub'
 }
 
 export default function RootLayout ({
@@ -19,10 +17,7 @@ export default function RootLayout ({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Flex>
-            <Sidebar />
-            {children}
-          </Flex>
+          {children}
         </Providers>
       </body>
     </html>
