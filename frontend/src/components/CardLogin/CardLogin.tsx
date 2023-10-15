@@ -1,5 +1,13 @@
 import { Card, Text, CardBody, CardHeader, Heading, Flex, Box, Input, Button } from '@chakra-ui/react'
+// interface ICardAuth {
+//   onAuth: (cpf: string, senha: string) => void
+// }
 
+// export interface IAuth {
+//   cpf: string
+//   senha: string
+// }
+// : FC<ICardAuth>
 export const CardLogin = () => {
   return (
     <Card padding='0px 42px 0px 42px' maxW='500px' >

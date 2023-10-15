@@ -1,9 +1,7 @@
 'use client'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider, extendTheme, Flex } from '@chakra-ui/react'
-import { Sidebar } from '@/components/Sidebar'
+import { ChakraProvider, extendTheme, Flex, Box } from '@chakra-ui/react'
 import { usePathname } from 'next/navigation'
-import { NextUIProvider } from '@nextui-org/react'
 
 const theme = extendTheme({
   fonts: {
@@ -23,16 +21,13 @@ export function Providers ({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
-  const isHome = pathname === '/home'
+  // const isHome = pathname === '/home'
   console.log(pathname)
   return (
     <CacheProvider>
       {/* <NextUIProvider> */}
       <ChakraProvider theme={theme}>
-        <Flex >
-          {isHome && <Sidebar />}
-          {children}
-        </Flex>
+        {children}
       </ChakraProvider>
       {/* </NextUIProvider> */}
     </CacheProvider>

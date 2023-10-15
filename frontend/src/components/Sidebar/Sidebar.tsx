@@ -3,7 +3,7 @@ import { FiHome, FiPhone, FiUsers, FiLogOut } from 'react-icons/fi'
 
 const menuItems = [
   { id: 1, label: 'Dashboard', icon: () => <FiHome size={20} color='#FFFFFF'/>, link: '/home' },
-  { id: 2, label: 'Cadastrar cliente', icon: () => <FiUsers size={20} color='#FFFFFF' />, link: '/inserir/cliente' },
+  { id: 2, label: 'Cadastrar cliente', icon: () => <FiUsers size={20} color='#FFFFFF' />, link: '/home/inserir/cliente' },
   { id: 3, label: 'Cadastrar contato', icon: () => <FiPhone size={20} color='#FFFFFF'/>, link: '/inserir/contato' }
 ]
 
@@ -11,7 +11,7 @@ export const Sidebar = () => {
   return (
     <Flex h='100vh' bgColor='#02043E' width={250} minW={250} flexDirection='column' >
       <Flex h='10%' justifyContent='center' alignItems='center' paddingLeft={5} paddingBottom={3} paddingTop={5} paddingRight={5}>
-        <Image w={100} h={10} src='images/clienthub.png'/>
+        <Image w={100} h={10} src='../../images/clienthub.png'/>
       </Flex>
       <Box position='relative' padding='4'>
         <Divider orientation='horizontal'/>
