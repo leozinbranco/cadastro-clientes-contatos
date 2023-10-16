@@ -105,7 +105,3 @@ Para parar a aplicação, você pode pressionar `Ctrl+C` nos terminais onde o fr
 ```bash
 docker-compose down
 ```
-
-## Contribuições
-
-Contribuições são bem-vindas. Sinta-se à vontade para abrir problemas ou enviar solicitações de pull.
