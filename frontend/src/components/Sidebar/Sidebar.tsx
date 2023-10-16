@@ -1,3 +1,6 @@
+'use client'
+
+import { useLogin } from '@/hooks'
 import { Flex, Text, Link, Image, Divider, Box } from '@chakra-ui/react'
 import { FiHome, FiPhone, FiUsers, FiLogOut } from 'react-icons/fi'
 
@@ -8,6 +11,8 @@ const menuItems = [
 ]
 
 export const Sidebar = () => {
+  const { logout } = useLogin()
+
   return (
     <Flex h='100vh' bgColor='#02043E' width={250} minW={250} flexDirection='column' >
       <Flex h='10%' justifyContent='center' alignItems='center' paddingLeft={5} paddingBottom={3} paddingTop={5} paddingRight={5}>
@@ -35,7 +40,7 @@ export const Sidebar = () => {
           <Divider orientation='horizontal' />
         </Flex>
         <Flex justifyContent='center' flexDirection='column' h='100%'>
-          <Link color='#FFFFFF' marginLeft={5}>
+          <Link color='#FFFFFF' marginLeft={5} onClick={() => logout()}>
             <Flex flexDirection='row' >
               <Flex marginRight={5} alignItems='center'>
                 <FiLogOut size={20} color='#FFFFFF' />

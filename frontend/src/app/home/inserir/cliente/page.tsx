@@ -1,6 +1,6 @@
 'use client'
 import { Button, FormErrorMessage, Box, Text, FormControl, IconButton, Flex, FormLabel, FormHelperText, Input } from '@chakra-ui/react'
-import { SetStateAction, useEffect, useState } from 'react'
+import { SetStateAction, useState } from 'react'
 import { FiPlus } from 'react-icons/fi'
 
 interface Cliente {

@@ -25,11 +25,9 @@ export function Providers ({
   console.log(pathname)
   return (
     <CacheProvider>
-      {/* <NextUIProvider> */}
       <ChakraProvider theme={theme}>
         {children}
       </ChakraProvider>
-      {/* </NextUIProvider> */}
     </CacheProvider>
   )
 }

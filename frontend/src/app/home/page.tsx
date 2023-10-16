@@ -1,18 +1,11 @@
 'use client'
 import { useDisclosure, TableContainer, Card, CardBody, Button, Modal, ModalOverlay, ModalHeader, ModalContent, ModalFooter, ModalCloseButton, ModalBody, Box, Text, Table, Thead, Tbody, Th, Tr, Td, Flex, IconButton } from '@chakra-ui/react'
-// import { useDisclosure } from 'react'
-// import { columns, users } from '../../../../teste-data'
-// import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Chip, Tooltip, ChipProps, getKeyValue } from '@nextui-org/react'
 import { EditIcon } from '@/public/icons/edit-icon'
 import { EyeIcon } from '@/public/icons/eye-icon'
 import { DeleteIcon } from '@/public/icons/delete-icon'
 import { Person } from '@/public/icons/person'
+import { Cliente } from '@/domain/entities'
 import { useState } from 'react'
-// const statusColorMap: Record<string, ChipProps['color']> = {
-//   active: 'success',
-//   paused: 'danger',
-//   vacation: 'warning'
-// }
 const columns = [
   { label: 'Id' },
   { label: 'Nome' },
@@ -29,7 +22,7 @@ const rows: Cliente[] = [
       '555-234-7777',
       '888-543-0000'
     ],
-    dataRegistro: '2023-10-11'
+    dataRegistro: new Date('2023-10-11')
   },
   {
     id: 2,
@@ -39,7 +32,7 @@ const rows: Cliente[] = [
       '555-232-7777',
       '888-999-1234'
     ],
-    dataRegistro: '2023-10-10'
+    dataRegistro: new Date('2023-10-10')
   },
   {
     id: 3,
@@ -49,7 +42,7 @@ const rows: Cliente[] = [
       '555-123-7777',
       '888-999-0000'
     ],
-    dataRegistro: '2023-10-09'
+    dataRegistro: new Date('2023-10-09')
   },
   {
     id: 4,
@@ -59,7 +52,7 @@ const rows: Cliente[] = [
       '555-324-7777',
       '888-232-0000'
     ],
-    dataRegistro: '2023-10-08'
+    dataRegistro: new Date('2023-10-08')
   }
 ]
 
@@ -82,15 +75,6 @@ interface Contato {
   telefones: string[]
 }
 
-interface Cliente {
-  id: number
-  nome: string
-  email: string
-  telefones: string[]
-  dataRegistro: string
-}
-
-// type User = typeof users[0]
 export default function Home () {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [selectedClient, setSelectedClient] = useState<Cliente | undefined>({
@@ -119,7 +103,6 @@ export default function Home () {
         </Box>
         <TableContainer width='100%'>
           <Table variant='simple' size='lg'>
-            {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
             <Thead>
               <Tr>
                 {columns.map(column => (<Th>{column.label}</Th>))}
@@ -130,7 +113,7 @@ export default function Home () {
                 <Td>{row.id}</Td>
                 <Td>{row.nome}</Td>
                 <Td>{row.email}</Td>
-                <Td >{row.dataRegistro}</Td>
+                <Td >{row.dataRegistro.toString()}</Td>
                 <Td >
                   <Flex flexDirection='row' justifyContent='space-evenly'>
                     <IconButton aria-label='Ver cliente' onClick={() => handleOpenModal(Number(row.id))} width={2} icon={<EyeIcon />} />
@@ -156,7 +139,7 @@ export default function Home () {
               </Flex>
               <Flex flexDirection='row'>
                 <Text fontSize='md'marginRight={2} > Data de registro:</Text>
-                <Text fontSize='md' fontWeight={300}>{selectedClient?.dataRegistro}</Text>
+                <Text fontSize='md' fontWeight={300}>{selectedClient?.dataRegistro.toString()}</Text>
               </Flex>
               {selectedClient?.telefones.map((tel, index) => (
                 <Flex flexDirection='row' marginLeft={6}>

@@ -10,11 +10,8 @@ export default function DashboardLayout ({
     <Box>
       <Sidebar />
     </Box>
-    {/* <Box width='100%' height='100vh' overflowX="auto"> */}
     <Flex width='100%' height='100vh' >
-
       {children}
     </Flex>
-    {/* </Box> */}
   </Flex></section>
 }
