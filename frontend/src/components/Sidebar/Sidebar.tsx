@@ -2,12 +2,11 @@
 
 import { useLogin } from '@/hooks'
 import { Flex, Text, Link, Image, Divider, Box } from '@chakra-ui/react'
-import { FiHome, FiPhone, FiUsers, FiLogOut } from 'react-icons/fi'
+import { FiHome, FiUsers, FiLogOut } from 'react-icons/fi'
 
 const menuItems = [
   { id: 1, label: 'Dashboard', icon: () => <FiHome size={20} color='#FFFFFF'/>, link: '/home' },
-  { id: 2, label: 'Cadastrar cliente', icon: () => <FiUsers size={20} color='#FFFFFF' />, link: '/home/inserir/cliente' },
-  { id: 3, label: 'Cadastrar contato', icon: () => <FiPhone size={20} color='#FFFFFF'/>, link: '/inserir/contato' }
+  { id: 2, label: 'Cadastrar cliente', icon: () => <FiUsers size={20} color='#FFFFFF' />, link: '/home/inserir/cliente' }
 ]
 
 export const Sidebar = () => {

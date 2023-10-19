@@ -10,6 +10,7 @@ Este projeto é uma aplicação completa que inclui um frontend em Next.js e um 
 
 ## Configuração do Projeto
 
+
 ### 1. Clone o Repositório
 
 Clone o repositório para o seu ambiente de desenvolvimento:
@@ -86,6 +87,11 @@ Agora que o projeto está configurado e em execução, você pode acessar a apli
 - Frontend: [http://localhost:3000](http://localhost:3000)
 - Backend: [http://localhost:8080](http://localhost:8080)
 
+O usuário de teste pode ser acessado com: 
+User: usuario-teste
+- User: usuario-teste
+- Senha: teste123
+
 ## Funcionalidades
 
 - **Autenticação**: Todas as rotas do backend requerem autenticação usando JWT.
@@ -96,7 +102,6 @@ Agora que o projeto está configurado e em execução, você pode acessar a apli
 
 - **Vínculo Cliente-Contato**: Um cliente pode ter vários contatos vinculados a ele.
 
-- **Relatório**: Implemente uma funcionalidade de relatório para exibir clientes e seus contatos. Use sua criatividade para projetar essa funcionalidade.
 
 ## Como Parar a Aplicação
 

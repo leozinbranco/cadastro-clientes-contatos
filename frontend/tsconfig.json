@@ -31,10 +31,13 @@
         "./public/*"
       ],
       "@/domain/*": [
-        "./domain/*"
+        "./src/domain/*"
       ],
       "@/hooks/*": [
-        "./hooks/*"
+        "./src/hooks/*"
+      ],
+      "@/axios/*": [
+        "./src/infra/*"
       ]
     }
   },

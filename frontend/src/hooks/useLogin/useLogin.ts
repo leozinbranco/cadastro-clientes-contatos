@@ -10,6 +10,7 @@ export const useLogin = () => {
         username,
         password: senha
       })
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
       localStorage.setItem('access-token', response.data.access_token)
     } catch (e) {
       const { message } = e as Error

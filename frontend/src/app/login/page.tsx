@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 'use client'
 import { Image, Flex } from '@chakra-ui/react'
 import { CardLogin } from '@/components/CardLogin'
